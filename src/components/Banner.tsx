@@ -101,27 +101,31 @@ const Banner = () => {
     <Container>
       <Slider ref={sliderRef} {...settings}>
         <ImgWrap>
-          <img className="logo" src="/img/logo.png" alt="logo" />
+          <img className="logo" src="/img/logo/logo.png" alt="logo" />
           <img src="/img/banner1.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
-          <img className="logo" src="/img/molteni-logo.svg" alt="logo" />
+          <img className="logo" src="/img/logo/molteni-logo.svg" alt="logo" />
           <img src="/img/banner2.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
-          <img className="logo" src="/img/molteniData-logo.png" alt="logo" />
+          <img
+            className="logo"
+            src="/img/logo/molteniData-logo.png"
+            alt="logo"
+          />
           <img src="/img/banner3.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
-          <img className="logo" src="/img/gessi-logo.svg" alt="logo" />
+          <img className="logo" src="/img/logo/gessi-logo.svg" alt="logo" />
           <img src="/img/banner4.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
-          <img className="logo" src="/img/kettal-logo.svg" alt="logo" />
+          <img className="logo" src="/img/logo/kettal-logo.svg" alt="logo" />
           <img src="/img/banner5.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
-          <img className="logo" src="/img/fontana-logo.svg" alt="logo" />
+          <img className="logo" src="/img/logo/fontana-logo.svg" alt="logo" />
           <img src="/img/banner6.jpg" alt="" />
         </ImgWrap>
       </Slider>

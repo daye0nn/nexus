@@ -46,7 +46,7 @@ const Header = () => {
   }, []);
   return (
     <Nav $isScrolled={isScrolled}>
-      <img src="/img/logo.png" alt="logo" />
+      <img src="/img/logo/logo.png" alt="logo" />
       <Item $isScrolled={isScrolled}>
         <li>nexus</li>
         <li>brands</li>

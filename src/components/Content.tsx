@@ -55,7 +55,7 @@ const Wrapper = styled.div`
   h3 {
     font-size: 3rem;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.5;
     margin-bottom: 100px;
   }
 `;
@@ -73,6 +73,11 @@ const Button = styled.div`
     font-size: 1.4rem;
     width: 100%;
     height: 100%;
+    gap: 10px;
+  }
+  &:hover {
+    border: none;
+    text-decoration: underline;
   }
 `;
 
@@ -90,7 +95,7 @@ const Content = () => {
             alt="livingroom"
           />
           <span>
-            <img src="/img/molteni-logo.svg" alt="logo" />
+            <img src="/img/logo/molteni-logo.svg" alt="logo" />
           </span>
         </LeftItem>
         <RightItem data-aos="slide-left" data-aos-duration="1500">
