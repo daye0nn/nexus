@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     --light: #fff;
     --dark: #000;
     --gray: #d0d2d5;
+    --ft-bg: #20283b;
   }
 
   html {

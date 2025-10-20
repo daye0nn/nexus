@@ -34,18 +34,33 @@ const Inner = styled.div`
 
 const Brand = () => {
   const brandLogos = [
-    "public/img/molteni-logo.svg",
-    "public/img/molteniData-logo.png",
-    "public/img/nolte-logo.svg",
+    "/img/logo/molteni-logo.svg",
+    "/img/logo/molteniData-logo.png",
+    "/img/logo/nolte-logo.svg",
+    "/img/logo/gessi-logo.svg",
+    "/img/logo/kettal-logo.svg",
+    "/img/logo/louispoulsen-logo.svg",
+    "/img/logo/fontana-logo.svg",
+    "/img/logo/porcelanosa-logo.svg",
+    "/img/logo/duravit-logo.svg",
+    "/img/logo/laufen-logo.svg",
+    "/img/logo/axent-logo.svg",
+    "/img/logo/kvadrat-logo.svg",
+    "/img/logo/fd-logo.svg",
+    "/img/logo/kaldewei-logo.svg",
+    "/img/logo/scheucher-logo.png",
   ];
+
   return (
     <Container>
       <Inner>
         <h3>Nexus Brands</h3>
         <ul>
-          <li>
-            <img src="/img/molteni-logo.svg" alt="" />
-          </li>
+          {brandLogos.map((logo, index) => (
+            <li key={index}>
+              <img src={logo} alt={`brand-${index}`} />
+            </li>
+          ))}
         </ul>
       </Inner>
     </Container>

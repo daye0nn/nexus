@@ -101,31 +101,47 @@ const Banner = () => {
     <Container>
       <Slider ref={sliderRef} {...settings}>
         <ImgWrap>
-          <img className="logo" src="/img/logo/logo.png" alt="logo" />
+          <img className="logo" src="/img/nexus-logo.png" alt="logo" />
           <img src="/img/banner1.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
-          <img className="logo" src="/img/logo/molteni-logo.svg" alt="logo" />
+          <img
+            className="logo"
+            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%883/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%883-img-molteni-logo-2.svg"
+            alt="logo"
+          />
           <img src="/img/banner2.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
           <img
             className="logo"
-            src="/img/logo/molteniData-logo.png"
+            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%885/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%885-logo_dada%201.png"
             alt="logo"
           />
           <img src="/img/banner3.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
-          <img className="logo" src="/img/logo/gessi-logo.svg" alt="logo" />
+          <img
+            className="logo"
+            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%886/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%886-img-gessi-logo-2.svg"
+            alt="logo"
+          />
           <img src="/img/banner4.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
-          <img className="logo" src="/img/logo/kettal-logo.svg" alt="logo" />
+          <img
+            className="logo"
+            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%881/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%881-img-kettal-logo-2.svg"
+            alt="logo"
+          />
           <img src="/img/banner5.jpg" alt="" />
         </ImgWrap>
         <ImgWrap>
-          <img className="logo" src="/img/logo/fontana-logo.svg" alt="logo" />
+          <img
+            className="logo"
+            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%882/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%882-img-fontana-logo-2.svg"
+            alt="logo"
+          />
           <img src="/img/banner6.jpg" alt="" />
         </ImgWrap>
       </Slider>
