@@ -3,10 +3,14 @@ import styled from "styled-components";
 const Container = styled.div`
   background: var(--ft-bg);
   color: var(--light);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
 `;
 
 const Top = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 80px 0 40px;
 `;
 
 const Inner = styled.div`
@@ -24,11 +28,14 @@ const Inner = styled.div`
 `;
 
 const Info = styled.div`
-  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: rgba(255, 255, 255, 0.7);
 `;
 
 const Contact = styled.div`
-  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
 `;
 
 const Bottom = styled.div``;
