@@ -16,13 +16,23 @@ const Top = styled.div`
 const Inner = styled.div`
   max-width: 1440px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 16px;
   .logo {
     width: 100px;
     img {
       width: 100%;
       object-fit: cover;
+    }
+  }
+  .insta {
+    display: flex;
+    flex-direction: column;
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 `;
@@ -38,7 +48,9 @@ const Contact = styled.div`
   color: rgba(255, 255, 255, 0.7);
 `;
 
-const Bottom = styled.div``;
+const Bottom = styled.div`
+  padding: 40px 0;
+`;
 
 const Footer = () => {
   return (
@@ -81,9 +93,13 @@ const Footer = () => {
       <Bottom>
         <Inner>
           <p>&copy; HANSSEM NEXUS 2023. All rights reserved</p>
-          <div>
-            <a href="#">INSTAGRAM (Nexus Flagship Store)</a>
-            <a href="#">INSTAGRAM (Nolte)</a>
+          <div className="insta">
+            <a href="https://www.instagram.com/nexus_flagship_official/">
+              INSTAGRAM (Nexus Flagship Store)
+            </a>
+            <a href="https://www.instagram.com/nolte_korea/">
+              INSTAGRAM (Nolte)
+            </a>
           </div>
           <p>개인정보처리방침</p>
         </Inner>
