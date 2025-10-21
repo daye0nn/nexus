@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,7 +16,7 @@ const Container = styled.div`
 const ImgWrap = styled.div`
   position: relative;
   height: 100vh;
-  img {
+  img.bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -25,7 +26,6 @@ const ImgWrap = styled.div`
     position: absolute;
     top: 50%;
     left: 150px;
-    transform: translateY(-50%);
     width: 500px;
     height: auto;
     object-fit: cover;
@@ -97,53 +97,50 @@ const Banner = () => {
   useEffect(() => {
     Aos.init();
   }, []);
+
+  const slides = [
+    { logo: "/img/nexus-logo.png", bg: "/img/banner1.jpg" },
+    {
+      logo: "https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%883/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%883-img-molteni-logo-2.svg",
+      bg: "/img/banner2.jpg",
+    },
+    {
+      logo: "https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%885/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%885-logo_dada%201.png",
+      bg: "/img/banner3.jpg",
+    },
+    {
+      logo: "https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%886/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%886-img-gessi-logo-2.svg",
+      bg: "/img/banner4.jpg",
+    },
+    {
+      logo: "https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%881/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%881-img-kettal-logo-2.svg",
+      bg: "/img/banner5.jpg",
+    },
+    {
+      logo: "https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%882/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%882-img-fontana-logo-2.svg",
+      bg: "/img/banner6.jpg",
+    },
+  ];
+
   return (
     <Container>
       <Slider ref={sliderRef} {...settings}>
-        <ImgWrap>
-          <img className="logo" src="/img/nexus-logo.png" alt="logo" />
-          <img src="/img/banner1.jpg" alt="" />
-        </ImgWrap>
-        <ImgWrap>
-          <img
-            className="logo"
-            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%883/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%883-img-molteni-logo-2.svg"
-            alt="logo"
-          />
-          <img src="/img/banner2.jpg" alt="" />
-        </ImgWrap>
-        <ImgWrap>
-          <img
-            className="logo"
-            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%885/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%885-logo_dada%201.png"
-            alt="logo"
-          />
-          <img src="/img/banner3.jpg" alt="" />
-        </ImgWrap>
-        <ImgWrap>
-          <img
-            className="logo"
-            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%886/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%886-img-gessi-logo-2.svg"
-            alt="logo"
-          />
-          <img src="/img/banner4.jpg" alt="" />
-        </ImgWrap>
-        <ImgWrap>
-          <img
-            className="logo"
-            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%881/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%881-img-kettal-logo-2.svg"
-            alt="logo"
-          />
-          <img src="/img/banner5.jpg" alt="" />
-        </ImgWrap>
-        <ImgWrap>
-          <img
-            className="logo"
-            src="https://nexus-official.com/data/file/_admin_banner_//%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%882/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%882-img-fontana-logo-2.svg"
-            alt="logo"
-          />
-          <img src="/img/banner6.jpg" alt="" />
-        </ImgWrap>
+        {slides.map((s, i) => (
+          <ImgWrap key={i}>
+            {current === i && (
+              <motion.img
+                className="logo"
+                src={s.logo}
+                alt="logo"
+                key={i}
+                initial={{ opacity: 0, x: -70, y: "-50%" }}
+                animate={{ opacity: 1, x: 0, y: "-50%" }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              />
+            )}
+            <img className="bg" src={s.bg} alt={`banner-${i}`} />
+          </ImgWrap>
+        ))}
       </Slider>
       <DotsWrapper>
         {[0, 1, 2, 3, 4, 5].map((i) => (
