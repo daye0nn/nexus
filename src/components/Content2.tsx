@@ -85,7 +85,7 @@ const Button = styled.div`
 
 const Content2 = () => {
   useEffect(() => {
-    Aos.init();
+    Aos.init({ once: true });
   }, []);
   return (
     <>

@@ -83,7 +83,7 @@ const Button = styled.div`
 
 const Content = () => {
   useEffect(() => {
-    Aos.init();
+    Aos.init({ once: true });
   }, []);
   return (
     <Container>
